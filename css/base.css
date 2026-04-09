@@ -1,0 +1,200 @@
+/* ============================================================
+   BASE RESET & TYPOGRAPHY — base.css
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--clr-bg-darkest);
+  color: var(--clr-white);
+  line-height: 1.65;
+  overflow-x: hidden;
+  min-height: 100vh;
+  /* Animated starfield via radial gradients */
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(61, 122, 255, 0.08) 0%, transparent 70%),
+    radial-gradient(circle at 10% 80%, rgba(123, 92, 250, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 90% 30%, rgba(0, 229, 255, 0.05) 0%, transparent 45%);
+}
+
+/* ── Scrollbar ────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--clr-bg-darkest); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--clr-violet), var(--clr-blue));
+  border-radius: 99px;
+}
+
+/* ── Selection ────────────────────────────────────── */
+::selection {
+  background: rgba(61, 122, 255, 0.3);
+  color: var(--clr-cyan);
+}
+
+/* ── Typography Scale ─────────────────────────────── */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+p { color: var(--clr-muted); }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul { list-style: none; }
+
+/* ── Utility Classes ──────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--sp-6);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--clr-blue), var(--clr-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(90deg, var(--clr-gold), #ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-text {
+  text-shadow: 0 0 30px rgba(0, 229, 255, 0.5);
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--clr-cyan);
+  margin-bottom: var(--sp-4);
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--clr-cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+.section-title {
+  font-size: clamp(var(--fs-2xl), 4vw, var(--fs-3xl));
+  margin-bottom: var(--sp-4);
+}
+
+.section-subtitle {
+  font-size: var(--fs-md);
+  color: var(--clr-muted);
+  max-width: 550px;
+}
+
+/* ── Glass Panel ──────────────────────────────────── */
+.glass {
+  background: var(--clr-bg-glass);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--clr-border);
+}
+
+/* ── Button Base ──────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: 0.75rem 2rem;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all var(--tr-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0);
+  transition: background var(--tr-fast);
+}
+
+.btn:hover::after { background: rgba(255,255,255,0.07); }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--clr-blue), var(--clr-violet));
+  color: var(--clr-white);
+  box-shadow: 0 4px 20px rgba(61, 122, 255, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(61, 122, 255, 0.55);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--clr-white);
+  border: 1px solid var(--clr-border);
+}
+
+.btn-ghost:hover {
+  border-color: var(--clr-border-hov);
+  transform: translateY(-2px);
+  box-shadow: var(--glow-card);
+}

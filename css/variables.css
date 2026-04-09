@@ -1,0 +1,79 @@
+/* ============================================================
+   DESIGN TOKENS — variables.css
+   Futuristic × Apple-Chic Portfolio
+   ============================================================ */
+
+:root {
+  /* ── Palette ─────────────────────────────────────── */
+  --clr-bg-darkest : #04040d;
+  --clr-bg-dark    : #080818;
+  --clr-bg-card    : rgba(12, 12, 30, 0.72);
+  --clr-bg-glass   : rgba(255, 255, 255, 0.04);
+  --clr-border     : rgba(120, 130, 255, 0.15);
+  --clr-border-hov : rgba(120, 160, 255, 0.45);
+
+  /* ── Accent Colors ────────────────────────────────── */
+  --clr-cyan     : #00e5ff;
+  --clr-blue     : #3d7aff;
+  --clr-violet   : #7b5cfa;
+  --clr-gold     : #f5c842;
+  --clr-white    : #f0f4ff;
+  --clr-muted    : rgba(180, 190, 255, 0.55);
+
+  /* ── Gradients ────────────────────────────────────── */
+  --grad-hero    : linear-gradient(135deg, #04040d 0%, #0b091f 50%, #04040d 100%);
+  --grad-card    : linear-gradient(145deg, rgba(30, 20, 80, 0.6) 0%, rgba(8, 8, 30, 0.9) 100%);
+  --grad-starter : linear-gradient(135deg, #00e5ff22, #3d7aff22);
+  --grad-pro     : linear-gradient(135deg, #7b5cfa22, #3d7aff22);
+  --grad-elite   : linear-gradient(135deg, #f5c84222, #ff8c0022);
+  --grad-cta     : linear-gradient(90deg, #3d7aff, #7b5cfa, #00e5ff);
+
+  /* ── Glow Effects ─────────────────────────────────── */
+  --glow-cyan    : 0 0 30px rgba(0, 229, 255, 0.35);
+  --glow-blue    : 0 0 30px rgba(61, 122, 255, 0.35);
+  --glow-violet  : 0 0 30px rgba(123, 92, 250, 0.35);
+  --glow-gold    : 0 0 30px rgba(245, 200, 66, 0.4);
+  --glow-card    : 0 20px 60px rgba(61, 122, 255, 0.15), 0 0 1px rgba(120, 160, 255, 0.3);
+
+  /* ── Typography ───────────────────────────────────── */
+  --font-display : 'Outfit', 'SF Pro Display', sans-serif;
+  --font-body    : 'Inter', 'SF Pro Text', sans-serif;
+  --font-mono    : 'JetBrains Mono', 'Fira Code', monospace;
+
+  --fs-xs   : 0.75rem;
+  --fs-sm   : 0.875rem;
+  --fs-base : 1rem;
+  --fs-md   : 1.125rem;
+  --fs-lg   : 1.375rem;
+  --fs-xl   : 1.75rem;
+  --fs-2xl  : 2.25rem;
+  --fs-3xl  : 3rem;
+  --fs-4xl  : 4rem;
+
+  /* ── Spacing ──────────────────────────────────────── */
+  --sp-2  : 0.5rem;
+  --sp-4  : 1rem;
+  --sp-6  : 1.5rem;
+  --sp-8  : 2rem;
+  --sp-12 : 3rem;
+  --sp-16 : 4rem;
+  --sp-24 : 6rem;
+
+  /* ── Radius ───────────────────────────────────────── */
+  --r-sm : 8px;
+  --r-md : 16px;
+  --r-lg : 24px;
+  --r-xl : 36px;
+
+  /* ── Transitions ──────────────────────────────────── */
+  --tr-fast   : 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --tr-normal : 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  --tr-slow   : 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Z-Index ──────────────────────────────────────── */
+  --z-base   : 1;
+  --z-card   : 10;
+  --z-nav    : 100;
+  --z-modal  : 200;
+  --z-toast  : 300;
+}
